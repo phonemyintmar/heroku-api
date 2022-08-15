@@ -12,13 +12,13 @@ import java.time.LocalDateTime;
 @Slf4j
 public class TestController {
 
-    @PostMapping("test")
+    @PostMapping("/test")
     public String test(@RequestBody ReaderLog readerLog) {
         log.info(readerLog.toString());
         return readerLog.toString();
     }
 
-    @GetMapping("thread")
+    @GetMapping("/thread")
     public String thread(){
         return String.valueOf(Thread.activeCount());
     }
